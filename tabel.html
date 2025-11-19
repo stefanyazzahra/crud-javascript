@@ -1,50 +1,118 @@
-<html>
-  <head>
-  <title>latihan table</title>
-  </head>
-  <body>
-  <h1>table nilai uas x ti
-  <table border :1>
-  	<tr>
-	 <th rowspan=2>no
-	 <th rowspan=2>nama
-	 <th colspan=3>nilai
-	</tr>
-	<tr>
-	 <th>ipa
-	 <th>ips
-	 <th>mtk
-	<tr>
-	<tr>
-	 <td>1
-         <td>amelia
-	 <td>100
-	 <td>95
-	 <td>90
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Tabel</title>
+
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #ffe6f5; /* pink muda */
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #cc0f72; /* pink tua */
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 70%;
+            margin: auto;
+            border-collapse: collapse;
+            background-color: #ffd1e8; /* pink lembut */
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(255, 105, 180, 0.4);
+        }
+
+        th {
+            background-color: #cc0f72; /* pink tua */
+            color: white;
+            padding: 12px;
+            font-size: 16px;
+        }
+
+        td {
+            padding: 10px;
+            text-align: center;
+            color: #660033;
+        }
+
+        tr:nth-child(even) {
+            background-color: #ffe0f2;
+        }
+
+        tr:hover {
+            background-color: #ffcce6;
+            transition: 0.2s;
+        }
+
+        table, th, td {
+            border: 1px solid #cc0f72;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Tabel Nilai UAS X TI</h1>
+
+    <table>
         <tr>
-	 <td>2
-         <td>stefany azzahra
-	 <td>100
-	 <td>95
-	 <td>90
+            <th rowspan="2">No</th>
+            <th rowspan="2">Nama</th>
+            <th colspan="3">Nilai</th>
+        </tr>
+
         <tr>
-	 <td>3
-         <td>fadilah
-	 <td>95
-	 <td>85
-	 <td>80
+            <th>IPA</th>
+            <th>IPS</th>
+            <th>MTK</th>
+        </tr>
+
         <tr>
-	 <td>4
-         <td>salwa
-	 <td>90
-	 <td>95
-	 <td>85
+            <td>1</td>
+            <td>Amelia</td>
+            <td>100</td>
+            <td>95</td>
+            <td>90</td>
+        </tr>
+
         <tr>
-	 <td>5
-         <td>anuggrah
-	 <td>85
-	 <td>90
-	 <td>95
-  </table>
-  </body>
+            <td>2</td>
+            <td>Stefany Azzahra</td>
+            <td>100</td>
+            <td>95</td>
+            <td>90</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Fadilah</td>
+            <td>95</td>
+            <td>85</td>
+            <td>80</td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>Salwa</td>
+            <td>90</td>
+            <td>95</td>
+            <td>85</td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>Anuggrah</td>
+            <td>85</td>
+            <td>90</td>
+            <td>95</td>
+        </tr>
+    </table>
+
+</body>
 </html>
