@@ -1,31 +1,85 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="id">
 <head>
-	<title>Contoh Layout dengan Element Semantik</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Layout dengan Element Semantik</title>
+
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #ffe6f5; /* pink muda */
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #cc0f72; /* pink tua */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #ff4da6;
+            text-align: center;
+            padding: 12px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffe6f5;
+        }
+
+        article {
+            background-color: #ffd1e8; /* pink lembut */
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            color: #660033;
+            box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+        }
+
+        footer {
+            background-color: #cc0f72; /* pink tua */
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 
-<body style="background-color: pink;">
- 
- <header style="background-color: pink;">
-   <h1>belajar Element semantik di HTML</h1.
- </header>
- <nav>
-   <a href="#">home</a> |
-   <a href="#">About</a> |
-   <a href="#">Contact</a>
- </nav>
+<body>
 
- <article style="background-color: pink;">
-   <h1>Tutorial Semantik Element untuk pemula</h1>
-   <p>Semantik element adalah yang memiliki makna dan tujuan.
-      Tujuanya agar kode HTML mudah dibaca dan tidak ada penyalahgunaan tag.
-      Element semantik bagus untuk SEO dan juga dapat meningkatan accessibility.
-   </p>
- </article>
+    <header>
+        <h1>Belajar Element Semantik di HTML</h1>
+    </header>
 
- <footer style="background-color: pink;">
-   copyright dancopy; 2020 by petani kode
- </footer> 
+    <nav>
+        <a href="#">Home</a> |
+        <a href="#">About</a> |
+        <a href="#">Contact</a>
+    </nav>
+
+    <article>
+        <h1>Tutorial Semantik Element untuk Pemula</h1>
+        <p>
+            Elemen semantik adalah elemen HTML yang memiliki makna dan tujuan.  
+            Tujuannya agar kode HTML mudah dibaca dan tidak terjadi penyalahgunaan tag.  
+            Elemen semantik bagus untuk SEO dan meningkatkan accessibility.
+        </p>
+    </article>
+
+    <footer>
+        &copy; 2020 by Petani Kode
+    </footer>
 
 </body>
 </html>
