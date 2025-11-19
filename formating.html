@@ -1,23 +1,74 @@
 <!DOCTYPE html>
-<html>
-  <head>
-	<title>Tulisan</title>
- </head>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tulisan</title>
+
+    <style>
+        body {
+            background-color: #ffe6f5; /* pink muda */
+            font-family: "Poppins", sans-serif;
+            padding: 25px;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #cc0f72; /* pink tua */
+            background-color: #ffd1e8;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(255, 105, 180, 0.4);
+        }
+
+        .box {
+            background-color: #ffd6ea;
+            padding: 20px;
+            margin: auto;
+            width: 60%;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(255, 130, 190, 0.4);
+        }
+
+        .box p {
+            font-size: 18px;
+            color: #660033;
+            margin: 10px 0;
+        }
+
+        mark {
+            background-color: #ff80bf;
+            padding: 5px;
+            border-radius: 5px;
+            color: white;
+        }
+
+        /* Efek hover */
+        .box p:hover {
+            background-color: #ffcce6;
+            transition: 0.25s;
+            border-radius: 8px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
 <body>
 
-<h1>stefany <b>zahra</b></h1>
-<p>you can call me zahra aha.</p>
-<br><i>im from kepek.</i></br>
-<br><em>im 16 years old.</em></br>
-<br><small>i like noodles.</small></br>
-<br><sub>i love manggo fruit.</sub></br>
-<br><ins>i went to school in yaapi.</ins></br>
-<br><del>i dont like wild animals.</del></br>
-<br><sup>but i love cute animals.</sup></br>
-<br><mark>l love holidays.</mark></br>
+    <h1>Stefany <b>Zahra</b></h1>
 
-
-
+    <div class="box">
+        <p>you can call me zahra aha.</p>
+        <p><i>I'm from Kepek.</i></p>
+        <p><em>I'm 16 years old.</em></p>
+        <p><small>I like noodles.</small></p>
+        <p><sub>I love mango fruit.</sub></p>
+        <p><ins>I went to school in YAAPI.</ins></p>
+        <p><del>I don't like wild animals.</del></p>
+        <p><sup>But I love cute animals.</sup></p>
+        <p><mark>I love holidays.</mark></p>
+    </div>
 
 </body>
 </html>
