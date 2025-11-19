@@ -1,0 +1,48 @@
+/* Background lembut pink muda */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #ffeaf5;
+    padding: 20px;
+    margin: 0;
+    color: #663355;
+}
+
+/* Judul */
+.judul {
+    text-align: center;
+    color: #cc6699;
+    background-color: #ffd6e6;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(255, 182, 210, 0.8);
+}
+
+/* List utama */
+.list-utama {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* Sub list */
+.sub-list {
+    margin-top: 8px;
+    color: #993366;
+}
+
+.list-utama li {
+    margin-bottom: 10px;
+}
+
+/* List styling */
+ol li, ul li {
+    padding: 5px;
+    background-color: #ffe0f0; 
+    border-radius: 6px;
+    margin: 5px 0;
+}
+
+/* Hover efek manis */
+ol li:hover, ul li:hover {
+    background-color: #ffcce6;
+    transition: 0.2s;
+}
