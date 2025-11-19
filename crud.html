@@ -4,29 +4,210 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CRUD Data Siswa</title>
+  <style>
+    /* Reset dasar untuk konsistensi */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body dengan background merah soft lembut */
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ffe6e6 0%, #ffcccc 100%); /* Gradien merah soft */
+      color: #333;
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    /* Container utama untuk centering dan shadow */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(255, 102, 102, 0.3); /* Shadow merah soft */
+      border: 2px solid #ffcccc; /* Border merah soft */
+    }
+
+    /* Header */
+    h1 {
+      text-align: center;
+      color: #d9534f; /* Merah soft */
+      margin-bottom: 30px;
+      font-size: 2.5rem;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Form styling */
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #ffcccc; /* Border merah soft */
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    input[type="text"]:focus {
+      border-color: #d9534f; /* Merah soft lebih gelap saat focus */
+      box-shadow: 0 0 8px rgba(217, 83, 79, 0.5);
+      outline: none;
+    }
+
+    /* Tombol Tambah */
+    #addBtn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(45deg, #ffcccc, #d9534f); /* Gradien merah soft */
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    #addBtn:hover {
+      background: linear-gradient(45deg, #d9534f, #ffcccc); /* Gradien terbalik */
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(217, 83, 79, 0.4);
+    }
+
+    /* Tabel styling */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(255, 102, 102, 0.2);
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ffcccc; /* Border merah soft */
+    }
+
+    th {
+      background: #ffe6e6; /* Background header tabel merah soft */
+      color: #d9534f;
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+      background: #fff5f5; /* Stripe merah soft */
+    }
+
+    tr:hover {
+      background: #ffdddd; /* Hover merah soft */
+    }
+
+    /* Tombol dalam tabel (Edit/Hapus) */
+    button {
+      padding: 8px 12px;
+      margin: 0 5px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background 0.3s;
+    }
+
+    button[onclick*="editSiswa"] {
+      background: #ffc107; /* Kuning untuk edit */
+      color: white;
+    }
+
+    button[onclick*="editSiswa"]:hover {
+      background: #e0a800;
+    }
+
+    button[onclick*="hapusSiswa"] {
+      background: #dc3545; /* Merah untuk hapus */
+      color: white;
+    }
+
+    button[onclick*="hapusSiswa"]:hover {
+      background: #c82333;
+    }
+
+    /* Tombol kembali */
+    .btn-kembali {
+      display: inline-block;
+      margin-top: 20px;
+      background: linear-gradient(45deg, #ffcccc, #d9534f); /* Gradien merah soft */
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: Arial, sans-serif;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .btn-kembali:hover {
+      background: linear-gradient(45deg, #d9534f, #ffcccc);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(217, 83, 79, 0.4);
+    }
+
+    /* Responsivitas */
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      table {
+        font-size: 0.9rem;
+      }
+      button {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Data Siswa</h1>
+  <div class="container">
+    <h1>Data Siswa</h1>
 
-  <br><input type="text" id="nisInput" placeholder="Masukkan NIS"></br>
-  <br><input type="text" id="namaInput" placeholder="Masukkan Nama Siswa"><br>
-  <br><input type="text" id="kelasInput" placeholder="Masukkan Kelas"></br>
-  <br><button id="addBtn">Tambah</button></br>
+    <div class="form-group">
+      <input type="text" id="nisInput" placeholder="Masukkan NIS">
+    </div>
+    <div class="form-group">
+      <input type="text" id="namaInput" placeholder="Masukkan Nama Siswa">
+    </div>
+    <div class="form-group">
+      <input type="text" id="kelasInput" placeholder="Masukkan Kelas">
+    </div>
+    <button id="addBtn">Tambah</button>
 
-  <br><br>
+    <table>
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>NIS</th>
+          <th>Nama Siswa</th>
+          <th>Kelas</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody id="siswaTable"></tbody>
+    </table>
 
-  <table border="1" cellspacing="0" cellpadding="5">
-    <thead>
-      <tr>
-        <th>No</th>
-        <th>NIS</th>
-        <th>Nama Siswa</th>
-       <th>Kelas</th>
-       <th>Aksi</th>
-      </tr>
-    </thead>
-    <tbody id="siswaTable"></tbody>
-  </table>
+    <!-- Tombol kembali -->
+    <a href="index.html" class="btn-kembali">Kembali ke Beranda</a> <!-- Asumsi link ke index.html -->
+  </div>
 
   <!-- Taruh kode JavaScript di sini -->
   <script>
