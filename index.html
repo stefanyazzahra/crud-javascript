@@ -1,41 +1,154 @@
-<html>
+<!DOCTYPE html>
+<html lang="id">
 <head>
-	<title>web | portofolio zahra</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Zahra</title>
+
+    <style>
+        /* Reset margin/padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(to bottom, #ffe6f5, #ffd1e8);
+            color: #660033;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background: url('https://images.unsplash.com/photo-1601924928534-3bfe1f8f0e19?fit=crop&w=1350&q=80') center/cover no-repeat;
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 50px;
+            color: #cc0f72;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        header h2 {
+            font-size: 24px;
+            margin-top: 15px;
+            animation: fadeInUp 1.2s ease-in-out;
+        }
+
+        /* Menu bar sticky */
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: #cc0f72;
+            padding: 10px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #ff4da6;
+            transform: scale(1.1);
+        }
+
+        /* Main content */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: #ffd1e8;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(204,15,114,0.4);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .container p {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+
+        @keyframes fadeInDown {
+            0% {opacity: 0; transform: translateY(-50px);}
+            100% {opacity: 1; transform: translateY(0);}
+        }
+
+        @keyframes fadeInUp {
+            0% {opacity: 0; transform: translateY(50px);}
+            100% {opacity: 1; transform: translateY(0);}
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: white;
+            background-color: #cc0f72;
+            margin-top: 50px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+    </style>
 </head>
+
 <body>
-	<div class="ontainer".
-	      <h1>zahra web</h1>
-	  <br/>
-	  <h2>SELAMAT DATANG DIWEB ZAHRA </h2>
-	  <p>
-	   mari semangat belajar untuk mecapai cita-cita 
-	  </p>
-	   <div class="menu pilihan">
-	    <ul>
-		<li><a href="crud.html">crud</a></li>
-		<li><a href="daftar.html">daftar</a></li>
-		<li><a href="cobacss.html">cobacss</a></li>
-		<li><a href="elementsemantik.html">elementsemantik</a></li>
-		<li><a href="tabel.html">TABEL</a></li>
-		<li><a href="biodata.html">biodata</a></li>
-		<li><a href="kata.html">kata</a></li>
-        <li><a href="formating.html">formating</a></li>        
-		</ul>
+
+    <header>
+        <h1>Zahra Web</h1>
+        <h2>Selamat datang di portfolio ku!</h2>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="crud.html">CRUD</a></li>
+            <li><a href="daftar.html">Daftar</a></li>
+            <li><a href="cobacss.html">Coba CSS</a></li>
+            <li><a href="elementsemantik.html">Element Semantik</a></li>
+            <li><a href="tabel.html">Tabel</a></li>
+            <li><a href="biodata.html">Biodata</a></li>
+            <li><a href="kata.html">Kata</a></li>
+            <li><a href="formating.html">Formating</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <p>Mari semangat belajar untuk mencapai cita-cita.</p>
+        <p>Selalu percaya diri dan terus berkreasi dengan semangat pink muda dan tua!</p>
+    </div>
+
+    <footer>
+        &copy; 2025 Portfolio Zahra
+    </footer>
+
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
