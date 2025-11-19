@@ -1,0 +1,54 @@
+/* Background lembut pink muda */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #ffeaf5; /* pink muda */
+    margin: 0;
+    padding: 20px;
+    color: #662244;
+}
+
+/* Judul 1 — gantikan style background violet */
+.title1 {
+    background-color: #ffb3d9; /* pink muda */
+    color: #660033;
+    padding: 12px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* Paragraf */
+.n {
+    font-size: 18px;
+    font-style: italic;
+    color: #cc6699;
+    margin: 10px 0 20px 0;
+}
+
+/* Judul 2 — warna tomato diganti pink lembut */
+.title2 {
+    color: #ff80bf;
+    text-shadow: 1px 1px 2px #ffccdd;
+}
+
+/* Judul 3 — border biru diganti pink pastel */
+.title3 {
+    border: 2px solid #ff99cc;
+    padding: 10px;
+    color: #cc3385;
+    border-radius: 8px;
+}
+
+/* Link tombol */
+.btn-link {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #ff99cc;
+    text-decoration: none;
+    color: white;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.btn-link:hover {
+    background-color: #ff66b3;
+}
