@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <h2> CRUD DATA USER </h2>
 <br/>
 <a href="tambah.php">+TAMBAH USER</a>
@@ -12,25 +13,24 @@
 <th>PENDIDIKAN TERAKHIR</th>
 <th>ALAMAT</th>
 <th>OPSI</th>
-
 </tr>
 <?php
 include 'koneksi.php';
 $no = 1;
-$data = mysqli_query($koneksi, "select* form from"); while($d = mysqli_fetch_array($data)){
+$data = mysqli_query($koneksi, "select * from table_from"); while($d = mysqli_fetch_array($data)){
+
 	?>
 	<tr>
-	<th><?php echo $no++; ?></td>
-	<th><?php echo $d['nama']; ?></td>
-	<th><?php echo $d['jenis_kelamin]; ?></td>
-	<th><?php echo $d['usia]; ?></td>
-	<th><?php echo $d['pendidikan_terakhir']; ?></td>
-	<th><?php echo $d['alamat']; ?></td>
+	<td><?php echo $no++; ?></td>
+	<td><?php echo $d['nama']; ?></td>
+	<td><?php echo $d['jenis_kelamin']; ?></td>
+	<td><?php echo $d['pendidikan_terakhir']; ?></td>
+	<td><?php echo $d['alamat']; ?></td>
 	<td>
 	<a href="edit.php?id=<?php echo $d['id'];
-	?>"EDIT"</a>
+	?>">EDIT</a>
 	   <a href="hapus.php?id=<?php echo $d['id'];
-	?>"HAPUS"</a>
+	?>">HAPUS</a>
 	</td>
 	</tr>
 	<?php

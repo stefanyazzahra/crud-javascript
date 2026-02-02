@@ -1,0 +1,18 @@
+<?php
+// koneksi database
+include 'koneksi.php';
+
+// menangkap data yang dikirim dari form
+$nama = $_POST['nama'];
+$jenis_kelamin = $_POST['jenis_kelamin'];
+$usia = $_POST['usia'];
+$pendidikan_terakhir = $_POST['pendidikan_terakhir'];
+$alamat =$_POST['alamat'];
+
+// menginput data ke database
+mysqli_query($koneksi,"insert into table_from value('','$nama','$jenis_kelamin','$usia','$pendidikan_terakhir','$alamat')");
+
+// mengalihkan halaman kembali ke index.php
+header('location:index.php');
+
+?>
